@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "mywebsite",
   "version": "1.0.0",
   "description": "personal website",
+=======
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for front-end app",
+>>>>>>> 9c9bd0cd9239dcf7bff25f7cae86749c4728c01a
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
