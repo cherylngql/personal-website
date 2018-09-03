@@ -1,2 +1,2 @@
 # personal-website
-# visit https://www.cherylngql.com/
+visit https://www.cherylngql.com/
