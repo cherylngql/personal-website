@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
 import {storageRef} from './firebase'
 
 class Projects extends Component {
@@ -31,23 +30,23 @@ class Projects extends Component {
     return (
       <div id="projects">
         <div className="singleProject">
-          <Link to="https://www.playspacecraft.com"><img className="project" id="spacecraft" src={this.state.spacecraftUrl}/></Link>
+          <a href="https://www.playspacecraft.com"><img className="project" id="spacecraft" src={this.state.spacecraftUrl}/></a>
           <div className="description">
-            <h1>SpaceCraft<Link to="https://github.com/Space-Crew/SpaceCraft"><img className="github-icon" src="github_icon.png"/></Link></h1>
+            <h1>SpaceCraft<a href="https://github.com/Space-Crew/SpaceCraft"><img className="github-icon" src="github_icon.png"/></a></h1>
             <p>Online real-time multiplayer 3D block building game</p>
           </div>
         </div>
         <div className="singleProject">
-          <Link to="https://github.com/cherylngql/Shubie/blob/master/README.md"><img className="project" id="shubie" src={this.state.shubieUrl}/></Link>
+          <a href="https://github.com/cherylngql/Shubie/blob/master/README.md"><img className="project" id="shubie" src={this.state.shubieUrl}/></a>
           <div className="description">
-            <h1>Shubie<Link to="https://github.com/cherylngql/Shubie"><img className="github-icon" src="github_icon.png"/></Link></h1>
+            <h1>Shubie<a href="https://github.com/cherylngql/Shubie"><img className="github-icon" src="github_icon.png"/></a></h1>
             <p>An interactive dog on your desktop</p>
           </div>
         </div>
         <div className="singleProject">
-          <Link to="https://supermodel-matrices.herokuapp.com/"><img className="project" id="cormorant" src={this.state.cormorantUrl}/></Link>
+          <a href="https://supermodel-matrices.herokuapp.com/"><img className="project" id="cormorant" src={this.state.cormorantUrl}/></a>
           <div className="description">
-            <h1>Cormorant<Link to="https://github.com/Supermodel-Matrices/GraceShopper"><img className="github-icon" src="github_icon.png"/></Link></h1>
+            <h1>Cormorant<a href="https://github.com/Supermodel-Matrices/GraceShopper"><img className="github-icon" src="github_icon.png"/></a></h1>
             <p>An e-commerce site for home-decor</p>
           </div>
         </div>
