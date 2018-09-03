@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import storageRef from './firebase'
+import {storageRef} from './firebase'
 
 class Projects extends Component {
   constructor() {

@@ -17,8 +17,5 @@ if (!firebase.apps.length) {
 const storage = firebase.storage();
 
 // Create a storage reference from our storage service
-const storageRef = storage.ref();
-
-
-
-export default storageRef;
+export const storageRef = storage.ref();
+export const db = firebase.database();
