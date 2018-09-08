@@ -105,6 +105,11 @@ a {
   padding: 45px;
 }
 
+#designs {
+  width: 100%;
+  padding: 45px;
+}
+
 #contact {
   width: 100%;
   padding: 45px;
@@ -126,6 +131,16 @@ a {
 .singleProject {
   float: right;
   width: 480px;
+  padding: 0 30px 60px 30px;
+}
+
+.design {
+  height: 480px;
+}
+
+.singleDesign {
+  float: right;
+  width: 340px;
   padding: 0 30px 60px 30px;
 }
 
