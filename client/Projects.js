@@ -30,7 +30,7 @@ class Projects extends Component {
     return (
       <div id="projects">
         <div className="singleProject">
-          <a href="https://www.playspacecraft.com"><img className="project" id="spacecraft" src={this.state.spacecraftUrl}/></a>
+          <a href="https://www.playspacecraft.com"><img className="project" id="spacecraft" src="spacecraft.gif"/></a>
           <div className="description">
             <h1>SpaceCraft<a href="https://github.com/Space-Crew/SpaceCraft"><img className="github-icon" src="github_icon.png"/></a></h1>
             <p>Online real-time multiplayer 3D block building game</p>
