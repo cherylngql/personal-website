@@ -136,6 +136,12 @@ a {
 
 .design {
   height: 480px;
+  display: none;
+  text-align: center;
+}
+
+.loading {
+  height: 480px;
 }
 
 .singleDesign {
