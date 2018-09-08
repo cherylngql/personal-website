@@ -4,28 +4,8 @@ import {storageRef} from './firebase'
 class Projects extends Component {
   constructor() {
     super();
-    this.state = {
-      spacecraftUrl: 'loadingcat.gif',
-      shubieUrl: 'loadingcat.gif',
-      cormorantUrl: 'loadingcat.gif'
-    }
   }
 
-
-  async componentDidMount() {
-    try {
-      const spacecraftUrl = await storageRef.child('spacecraft.gif').getDownloadURL()
-      const shubieUrl = await storageRef.child('shubie.gif').getDownloadURL()
-      const cormorantUrl = await storageRef.child('cormorant.gif').getDownloadURL()
-      this.setState({
-        spacecraftUrl,
-        shubieUrl,
-        cormorantUrl
-      })
-    } catch (err) {
-      console.log('there is an error', err)
-    }
-  }
   render() {
     return (
       <div id="projects">
@@ -37,14 +17,14 @@ class Projects extends Component {
           </div>
         </div>
         <div className="singleProject">
-          <a href="https://github.com/cherylngql/Shubie/blob/master/README.md"><img className="project" id="shubie" src={this.state.shubieUrl}/></a>
+          <a href="https://github.com/cherylngql/Shubie/blob/master/README.md"><img className="project" id="shubie" src="shubie.gif"/></a>
           <div className="description">
             <h1>Shubie<a href="https://github.com/cherylngql/Shubie"><img className="github-icon" src="github_icon.png"/></a></h1>
             <p>An interactive dog on your desktop</p>
           </div>
         </div>
         <div className="singleProject">
-          <a href="https://supermodel-matrices.herokuapp.com/"><img className="project" id="cormorant" src={this.state.cormorantUrl}/></a>
+          <a href="https://supermodel-matrices.herokuapp.com/"><img className="project" id="cormorant" src="cormorant.gif"/></a>
           <div className="description">
             <h1>Cormorant<a href="https://github.com/Supermodel-Matrices/GraceShopper"><img className="github-icon" src="github_icon.png"/></a></h1>
             <p>An e-commerce site for home-decor</p>
