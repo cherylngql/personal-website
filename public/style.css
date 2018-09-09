@@ -17,19 +17,18 @@ body {
 #container {
   flex: 5;
   padding: 0;
-  margin: 90px 200px 90px 20px;
-  max-width: 60%;
+  margin: 90px 150px 90px 20px;
+  max-width: 80%;
 }
 
 #navbar {
   flex: 1;
   display: flex;
-  margin: 90px 100px;
-  max-width: 25%;
+  margin: 90px 10% 90px 5%;
   text-align: right;
 }
 
-#nav-container {
+#nav-large {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -41,7 +40,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
-  padding: 45px;
+  padding: 45px 45px 45px 20px;
   right: 10px;
 }
 
@@ -92,7 +91,7 @@ a {
 }
 
 #intro {
-  padding: 0 50px;
+  padding: 0 50px 0 10px;
 }
 
 #intro p {
@@ -112,13 +111,15 @@ a {
 
 #contact {
   width: 100%;
-  padding: 45px;
+  padding: 45px 45px 45px 20px;
   margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 #landing {
   width: 100%;
-  padding: 45px;
+  padding: 45px 45px 45px 20px;
   right: 10px;
 }
 
@@ -136,7 +137,6 @@ a {
 
 .design {
   height: 480px;
-  display: none;
   text-align: center;
 }
 
@@ -176,7 +176,7 @@ h1 {
 }
 
 .extrashort {
-  height: 100px;
+  height: 50px;
 }
 
 .medium {
@@ -220,12 +220,12 @@ h4 {
 }
 
 form {
-  width: 50%;
+  width: 490px;
   font-size: 16px;
 }
 
 .form-element {
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 
 textarea {
@@ -249,19 +249,19 @@ input {
 }
 
 button {
-  margin-left: 10px;
+  margin-left: 0;
   border: none;
   border-radius: 5px;
 }
 
 .connect-icon {
   display: inline-block;
-  margin-left: 10px;
+  margin-right: 10px;
   height: 30px;
 }
 .connect-icon-small {
   display: inline-block;
-  margin-left: 10px;
+  margin-right: 10px;
   height: 26px;
 }
 
@@ -272,6 +272,172 @@ button {
 }
 
 #connect {
-  padding-left: 50px;
+  padding-left: 10px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 1132px) {
+  #about {
+    flex-direction: column;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  #intro {
+    padding: 30px 0 0 0;
+  }
+
+  #my-portrait {
+    display: flex;
+    height: 500px;
+    flex-direction: row;
+  }
+
+  #my-portrait img{
+    display: flex;
+    height: 500px;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1025px) {
+  /* projects */
+  /* contact */
+  #my-portrait {
+    display: flex;
+    height: 50vw;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.308);
+  }
+  #my-portrait img{
+    height: 50vw;
+  }
+
+  #navbar {
+    flex: 1;
+    display: flex;
+    margin: 90px 10% 90px 5%;
+    text-align: right;
+  }
+
+  #nav-large {
+    margin: 20px 20px 20px 0px;
+  }
+
+}
+
+@media (max-width: 850px) {
+  #nav-large {
+    display: none;
+  }
+
+  #nav-icon {
+    display: block;
+  }
+
+  #nav-small {
+    display: none;
+  }
+
+  #container {
+    margin: auto;
+  }
+
+  #about {
+    width: auto;
+    right: 0;
+    padding: 25% 0;
+  }
+
+  #landing {
+    width: auto;
+    right: 0;
+    padding: 250px 3%;
+  }
+
+  #contact {
+    width: auto;
+    right: 0;
+    padding: 2%;
+    justify-content: center;
+  }
+
+  #projects {
+    width: auto;
+    right: 0;
+    padding: 20% 1%;
+  }
+
+  #designs {
+    width: auto;
+    right: 0;
+    padding: 20% 2%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  #connect {
+    text-align: center;
+    padding: 0;
+  }
+
+  .singleProject {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: auto;
+    padding: 0 0 5% 0;
+  }
+
+  .singleDesign {
+    float: none;
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 5% 0;
+  }
+
+  .design {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .project {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .description {
+    padding: 10px 0 10px 0;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  #contact {
+    width: auto;
+    right: 0;
+    padding: 2%;
+    justify-content: center;
+  }
+
+  #my-portrait {
+    display: flex;
+    height: 80vw;
+    justify-content: center;
+    background-color: transparent;
+  }
+  #my-portrait img{
+    height: 80vw;
+  }
+
+  #landing {
+    width: auto;
+    right: 0;
+    padding: 200px 2%;
+  }
 }
