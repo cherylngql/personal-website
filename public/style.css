@@ -28,12 +28,30 @@ body {
   text-align: right;
 }
 
-#nav-large {
+#nav-container {
+  text-align: center;
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 20px;
+}
+
+#nav-container-small {
+  text-align: center;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.link:active {
+  background-color: rgba(255, 255, 255, 0.493);
+}
+
+#nav-icon {
+  display: none
 }
 
 #about {
@@ -320,23 +338,52 @@ button {
     text-align: right;
   }
 
-  #nav-large {
+  #nav-container {
     margin: 20px 20px 20px 0px;
   }
 
 }
 
 @media (max-width: 850px) {
-  #nav-large {
+  #app {
+    display: block;
+  }
+
+  #navbar {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav-container {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav-container-small {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(150, 200, 230, 0.568);
+    margin: 0;
     display: none;
   }
 
   #nav-icon {
+    height: 50px;
+    width: 98%;
     display: block;
+    position: fixed;
+    background-color: rgba(150, 200, 230, 0.568);
+    border-radius: 7px;
+    margin: 1%;
   }
 
-  #nav-small {
-    display: none;
+  #nav-icon img {
+    height: 30px;
+    padding: 10px;
   }
 
   #container {
@@ -352,26 +399,27 @@ button {
   #landing {
     width: auto;
     right: 0;
-    padding: 250px 3%;
+    padding: 30% 3%;
+    margin-top: 50px;
   }
 
   #contact {
     width: auto;
     right: 0;
-    padding: 2%;
+    padding: 30% 2%;
     justify-content: center;
   }
 
   #projects {
     width: auto;
     right: 0;
-    padding: 20% 1%;
+    padding: 40% 1%;
   }
 
   #designs {
     width: auto;
     right: 0;
-    padding: 20% 2%;
+    padding: 40% 2%;
   }
 
   form {
@@ -388,14 +436,14 @@ button {
     float: none;
     text-align: center;
     margin: auto;
-    padding: 0 0 5% 0;
+    padding: 0 0 10% 0;
   }
 
   .singleDesign {
     float: none;
     justify-content: center;
     width: 100%;
-    padding: 0 0 5% 0;
+    padding: 0 0 10% 0;
   }
 
   .design {
