@@ -11,6 +11,16 @@ class NavBar extends Component {
     this.handleMouseLeave = this.handleMouseLeave.bind(this)
   }
 
+  componentDidMount() {
+    // handles hiding navbar menu on mobile
+    document.addEventListener("click", event => {
+      if (event.target.closest("#nav-group-small")) return;
+      document.getElementById('nav-container-small').style.display = 'none';
+      document.getElementById('nav-icon').style.display = 'block';
+      this.setState({expanded: false})
+    });
+  }
+
   handleClick(evt) {
     if (!this.state.expanded) {
       document.getElementById('nav-container-small').style.display = 'flex';
@@ -23,13 +33,14 @@ class NavBar extends Component {
     }
   }
 
-  handleMouseLeave(evt) {
-    if (this.state.expanded) {
-      document.getElementById('nav-container-small').style.display = 'none';
-      document.getElementById('nav-icon').style.display = 'block';
-      this.setState({expanded: false})
-    }
-  }
+  // ??? does not work with componentDidMount/eventListener ???
+  // handleMouseLeave(evt) {
+  //   if (this.state.expanded) {
+  //     document.getElementById('nav-container-small').style.display = 'none';
+  //     document.getElementById('nav-icon').style.display = 'block';
+  //     this.setState({expanded: false})
+  //   }
+  // }
 
   render() {
     return (
