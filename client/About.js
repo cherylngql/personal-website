@@ -14,7 +14,7 @@ const About = () => {
           </p>
           <p>
             Learning about programming has lead me to a new path of possibilites where I can start using skills picked up on my way learning about the world
-            through physics and mathematics to create. I am working towards becoming a software developer to realize many tiny dreams of mine.
+            through physics and mathematics, to learn the myriad of immerging technologies that are often mind-blowing, and to create things that are useful, write codes that I am proud of. I am a software developer, and happily one. Learn more about my work and my experiences below.
           </p>
         </div>
         <div id="connect">
