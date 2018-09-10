@@ -366,7 +366,7 @@ button {
     width: 100%;
     top: 0;
     right: 0;
-    background-color: rgba(150, 200, 230, 0.568);
+    background-color: rgba(180, 224, 231, 0.959);
     margin: 0;
     display: none;
   }
@@ -376,9 +376,9 @@ button {
     width: 98%;
     display: block;
     position: fixed;
-    background-color: rgba(150, 200, 230, 0.568);
+    background-color: rgba(180, 224, 231, 0.959);
     border-radius: 7px;
-    margin: 1%;
+    margin: 0 1%;
   }
 
   #nav-icon img {
@@ -469,7 +469,7 @@ button {
   #contact {
     width: auto;
     right: 0;
-    padding: 2%;
+    padding: 30% 2%;
     justify-content: center;
   }
 
