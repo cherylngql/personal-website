@@ -8,11 +8,12 @@ class NavBar extends Component {
     super();
     this.state = {expanded: false}
     this.handleClick = this.handleClick.bind(this)
+    this.handleMouseLeave = this.handleMouseLeave.bind(this)
   }
 
   componentDidMount() {
     // handles hiding navbar menu on mobile
-    document.addEventListener("click", event => {
+    document.addEventListener("touchstart", event => {
       if (event.target.closest("#nav-group-small")) return;
       document.getElementById('nav-container-small').style.display = 'none';
       document.getElementById('nav-icon').style.display = 'block';
@@ -32,14 +33,14 @@ class NavBar extends Component {
     }
   }
 
-  // ??? does not work with componentDidMount/eventListener ???
-  // handleMouseLeave(evt) {
-  //   if (this.state.expanded) {
-  //     document.getElementById('nav-container-small').style.display = 'none';
-  //     document.getElementById('nav-icon').style.display = 'block';
-  //     this.setState({expanded: false})
-  //   }
-  // }
+  // ??? does not work with componentDidMount/eventListener on click ???
+  handleMouseLeave(evt) {
+    if (this.state.expanded) {
+      document.getElementById('nav-container-small').style.display = 'none';
+      document.getElementById('nav-icon').style.display = 'block';
+      this.setState({expanded: false})
+    }
+  }
 
   render() {
     return (
@@ -53,7 +54,7 @@ class NavBar extends Component {
         </div>
         <div id="nav-group-small">
           <div id="nav-icon"><img src="menu-icon.png" onClick={this.handleClick}/></div>
-          <div id="nav-container-small">
+          <div id="nav-container-small" onMouseLeave={this.handleMouseLeave}>
             <Link className="link" onClick={this.handleClick} to={'/about'}><p className="nav-link">About Me</p></Link>
             <Link className="link" onClick={this.handleClick} to={'/projects'}><p className="nav-link">Projects</p></Link>
             <Link className="link" onClick={this.handleClick} to={'/designs'}><p className="nav-link">Designs</p></Link>
