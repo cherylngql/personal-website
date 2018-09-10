@@ -19,7 +19,7 @@ const Home = () => {
       </h3>
       <div className="short"/>
       <h4 id="sing">
-        Sing tunes that belongs to the moment
+        Sing tunes that belong to the moment
       </h4>
       <div className="medium"/>
       <h2 id="design">
