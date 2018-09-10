@@ -8,7 +8,6 @@ class NavBar extends Component {
     super();
     this.state = {expanded: false}
     this.handleClick = this.handleClick.bind(this)
-    this.handleMouseLeave = this.handleMouseLeave.bind(this)
   }
 
   componentDidMount() {
@@ -54,7 +53,7 @@ class NavBar extends Component {
         </div>
         <div id="nav-group-small">
           <div id="nav-icon"><img src="menu-icon.png" onClick={this.handleClick}/></div>
-          <div id="nav-container-small" onMouseLeave={this.handleMouseLeave}>
+          <div id="nav-container-small">
             <Link className="link" onClick={this.handleClick} to={'/about'}><p className="nav-link">About Me</p></Link>
             <Link className="link" onClick={this.handleClick} to={'/projects'}><p className="nav-link">Projects</p></Link>
             <Link className="link" onClick={this.handleClick} to={'/designs'}><p className="nav-link">Designs</p></Link>
