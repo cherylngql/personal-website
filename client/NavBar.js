@@ -24,9 +24,11 @@ class NavBar extends Component {
   }
 
   handleMouseLeave(evt) {
-    document.getElementById('nav-container-small').style.display = 'none';
+    if (this.state.expanded) {
+      document.getElementById('nav-container-small').style.display = 'none';
       document.getElementById('nav-icon').style.display = 'block';
       this.setState({expanded: false})
+    }
   }
 
   render() {
