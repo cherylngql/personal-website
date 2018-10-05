@@ -5,6 +5,16 @@ class Designs extends Component {
     super(props)
     this.onLoad = this.onLoad.bind(this)
   }
+
+  componentDidMount() {
+    let designs = document.getElementById('designs')
+    designs.addEventListener('contextmenu', event => {
+      if (event.target.className === 'design') {
+        event.preventDefault()
+      }
+    });
+  }
+
   onLoad(event) {
     event.target.style.display = "block"
     event.target.nextElementSibling.style.display = "none"
